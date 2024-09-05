@@ -1,13 +1,9 @@
-// Smooth scrolling to the About section
-function scrollToInfo() {
-    const aboutSection = document.getElementById('about');
-    aboutSection.scrollIntoView({ behavior: 'smooth' });
-  }
-  
+
+
   // Function to detect when elements are in view
   function onScroll() {
     const fadeInElements = document.querySelectorAll('.fade-in');
-    const navbar = document.querySelector('.navbar');
+    const navbar = document.querySelector('navbar');
   
     fadeInElements.forEach(element => {
       const rect = element.getBoundingClientRect();
@@ -33,4 +29,10 @@ function scrollToInfo() {
   
   // Initial check
   onScroll();
+
+ 
+
+
+
+
   
