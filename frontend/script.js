@@ -1,5 +1,18 @@
 
 
+document.querySelector('.get-news').addEventListener('click', async () => {
+  try {
+    // Send a request to the backend to start Puppeteer and OpenAI tasks
+    const response = await fetch('/api/get-news');
+    const result = await response.json();
+    
+    // Display the result on the page
+    document.getElementById('result').textContent = `AI Response: ${result.data}`;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+});
+
   // Function to detect when elements are in view
   function onScroll() {
     const fadeInElements = document.querySelectorAll('.fade-in');
