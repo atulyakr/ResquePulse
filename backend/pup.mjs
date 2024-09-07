@@ -3,6 +3,10 @@ import OpenAI from "openai";
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+dotenv.config();
+
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,7 +22,7 @@ app.get('/', (req, res) => {
   });
 
 //open ai stuff configuration
-const openai = new OpenAI({ apiKey: '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' });
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY});
 
 const prompt="you are given an array of disaster related headlines. Analyze the text from the array and identify the headlines which seems most severe and require quick resque operatioin. Extract the location,casualities,injured and headline from the array."
 
