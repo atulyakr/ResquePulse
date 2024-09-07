@@ -7,7 +7,7 @@ document.querySelector('.get-news').addEventListener('click', async () => {
     const result = await response.json();
     
     // Display the result on the page
-    document.getElementById('result').textContent = `AI Response: ${result.data}`;
+    document.getElementById('news-section fade-in').textContent = `AI Response: ${result.data}`;
   } catch (error) {
     console.error('Error fetching data:', error);
   }

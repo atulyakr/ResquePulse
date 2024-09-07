@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   });
 
 //open ai stuff configuration
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY});
+const openai = new OpenAI();
 
 const prompt="you are given an array of disaster related headlines. Analyze the text from the array and identify the headlines which seems most severe and require quick resque operatioin. Extract the location,casualities,injured and headline from the array."
 
